@@ -22,11 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    Route::resource('katalog', KatalogController::class);
-});
-
+Route::resource('katalog', App\Http\Controllers\KatalogController::class)->middleware('auth');
 
 
 require __DIR__.'/auth.php';
