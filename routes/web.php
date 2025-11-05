@@ -24,5 +24,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('katalog', App\Http\Controllers\KatalogController::class)->middleware('auth');
 
+Route::get('/katalog/{id}/edit', [KatalogController::class, 'edit'])->name('admin/katalog-edit');
+Route::put('/katalog/{id}', [KatalogController::class, 'update'])->name('katalog.update');
 
 require __DIR__.'/auth.php';

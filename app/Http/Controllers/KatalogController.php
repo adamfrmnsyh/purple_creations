@@ -18,6 +18,12 @@ class KatalogController extends Controller
         return view('admin.katalog-create');
     }
 
+    public function edit($id)
+    {
+        $katalog = Katalog::findOrFail($id);
+        return view('admin.katalog-edit', compact('katalog'));
+    }
+
 
     public function store(Request $request)
     {
@@ -44,24 +50,39 @@ class KatalogController extends Controller
         return redirect()->route('katalog.index')->with('success', 'Katalog berhasil ditambahkan');
     }
 
-    public function update(Request $request, Katalog $katalog)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'nama_produk' => 'required',
             'jenis' => 'required',
             'harga' => 'required|numeric',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'status' => 'nullable',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
-        $data = $request->only(['nama_produk', 'jenis', 'deskripsi', 'harga', 'status']);
+        $katalog = Katalog::findOrFail($id);
 
+        $katalog->nama_produk = $request->nama_produk;
+        $katalog->jenis = $request->jenis;
+        $katalog->harga = $request->harga;
+        $katalog->status = $request->status ? 1 : 0;
+
+        // ✅ Jika upload gambar baru
         if ($request->hasFile('gambar')) {
-            $data['gambar'] = $request->file('gambar')->store('katalog', 'public');
+
+            // Hapus gambar lama jika ada
+            if ($katalog->gambar && \Storage::exists('public/' . $katalog->gambar)) {
+                \Storage::delete('public/' . $katalog->gambar);
+            }
+
+            // Simpan gambar baru
+            $path = $request->file('gambar')->store('katalog', 'public');
+            $katalog->gambar = $path;
         }
 
-        $katalog->update($data);
+        $katalog->save();
 
-        return back()->with('success', 'Katalog berhasil diperbarui');
+        return redirect()->route('katalog.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     public function destroy(Katalog $katalog)

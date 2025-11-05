@@ -27,8 +27,8 @@
       <div class="hidden md:block">
         <nav aria-label="Global">
           <ul class="flex items-center gap-8 text-md font-medium">
-            <li><a class=" text-white hover:text-gray-700" href="#">Beranda</a></li>
-            <li><a class=" text-white hover:text-gray-700" href="#">Katalog</a></li>
+            <li><a class=" text-white hover:text-gray-700" href="/">Beranda</a></li>
+            <li><a class=" text-white hover:text-gray-700" href="/katalog">Katalog</a></li>
             <li><a class=" text-white hover:text-gray-700" href="#">Tentang Kami</a></li>
             <li><a class=" text-white hover:text-gray-700" href="#">Kontak Kami</a></li>
           </ul>
