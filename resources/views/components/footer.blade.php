@@ -21,6 +21,18 @@
   });
 </script>
 
+<script>
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add("bg-white/90", "shadow-lg", "backdrop-blur");
+    } else {
+      navbar.classList.remove("bg-white/90", "shadow-lg", "backdrop-blur");
+    }
+  });
+</script>
+
 
 </body>
+
 </html>

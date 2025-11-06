@@ -1,6 +1,6 @@
-<div class="relative w-full h-screen">
+<div class="relative w-full h-[90vh] overflow-hidden p-6 ">
     <!-- Swiper -->
-    <div class="swiper mySwiper h-full">
+    <div class="swiper mySwiper h-full rounded-xl">
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">

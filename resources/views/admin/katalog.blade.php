@@ -3,7 +3,7 @@
 @section('content')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Katalog Produk</h1>
-    <a href="{{ route('katalog.create') }}" class="btn btn-primary btn-sm">
+    <a href="{{ route('admin.katalog.create') }}" class="btn btn-primary btn-sm">
         + Tambah Produk
     </a>
 </div>
@@ -55,14 +55,14 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('admin/katalog-edit', $item->id_katalog) }}"
+                            <a href="{{ route('admin.katalog.edit', $item->id_katalog) }}"
                                 class="btn btn-warning btn-sm">
                                 Edit
                             </a>
 
 
 
-                            <form action="{{ route('katalog.destroy', $item->id_katalog) }}"
+                            <form action="{{ route('admin.katalog.destroy', $item->id_katalog) }}"
                                 method="POST" style="display:inline;">
                                 @csrf @method('DELETE')
                                 <button onclick="return confirm('Hapus produk ini?')" class="btn btn-danger btn-sm">

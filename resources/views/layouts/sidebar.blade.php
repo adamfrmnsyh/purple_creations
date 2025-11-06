@@ -31,7 +31,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/katalog">
+                <a class="nav-link" href="/admin/katalog">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Katalog</span></a>
             </li>

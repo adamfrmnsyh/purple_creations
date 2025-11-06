@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Katalog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class KatalogController extends Controller
 {
@@ -23,6 +26,7 @@ class KatalogController extends Controller
         $katalog = Katalog::findOrFail($id);
         return view('admin.katalog-edit', compact('katalog'));
     }
+
 
 
     public function store(Request $request)
@@ -47,7 +51,7 @@ class KatalogController extends Controller
             'status' => $request->status ?? 1,
         ]);
 
-        return redirect()->route('katalog.index')->with('success', 'Katalog berhasil ditambahkan');
+        return redirect()->route('admin.katalog.index')->with('success', 'Katalog berhasil ditambahkan');
     }
 
     public function update(Request $request, $id)
@@ -71,8 +75,8 @@ class KatalogController extends Controller
         if ($request->hasFile('gambar')) {
 
             // Hapus gambar lama jika ada
-            if ($katalog->gambar && \Storage::exists('public/' . $katalog->gambar)) {
-                \Storage::delete('public/' . $katalog->gambar);
+            if ($katalog->gambar && Storage::exists('public/' . $katalog->gambar)) {
+                Storage::delete('public/' . $katalog->gambar);
             }
 
             // Simpan gambar baru
@@ -82,16 +86,20 @@ class KatalogController extends Controller
 
         $katalog->save();
 
-        return redirect()->route('katalog.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('admin.katalog.index')->with('success', 'Data berhasil diperbarui!');
     }
 
-    public function destroy(Katalog $katalog)
+    public function destroy($id)
     {
-        if ($katalog->gambar) {
-            @unlink(storage_path('app/public/' . $katalog->gambar));
+        $katalog = Katalog::findOrFail($id);
+
+        if ($katalog->gambar && Storage::exists('public/' . $katalog->gambar)) {
+            Storage::delete('public/' . $katalog->gambar);
         }
 
         $katalog->delete();
-        return back()->with('success', 'Katalog berhasil dihapus');
+
+        return redirect()->route('admin.katalog.index')
+            ->with('success', 'Katalog berhasil dihapus');
     }
 }

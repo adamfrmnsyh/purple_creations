@@ -5,7 +5,7 @@
 
     <h2 class="text-2xl font-bold mb-4">Edit Katalog Produk</h2>
 
-    <form action="{{ route('katalog.update', $katalog->id_katalog) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.katalog.update', $katalog->id_katalog) }}" method="POST" enctype="multipart/form-data">
 
         @csrf
         @method('PUT')
@@ -56,7 +56,7 @@
         </div>
 
         <div class="flex gap-3">
-            <a href="{{ route('katalog.index') }}" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
+            <a href="{{ route('admin.katalog.index') }}" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
                 Batal
             </a>
 

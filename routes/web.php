@@ -1,20 +1,29 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\KatalogController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\KatalogController as UserKatalogController;
+use App\Http\Controllers\PesananController;
 
 Route::get('/', function () {
     return view('home.index');
+});
+
+Route::get('/katalog', function () {
+    return view('home.katalog');
 });
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/katalog', function () {
-    return view('admin.katalog');
-})->middleware(['auth', 'verified'])->name('katalog');
+// ✅ Group route admin
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
+
+    Route::resource('katalog', KatalogController::class);
+
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -22,9 +31,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('katalog', App\Http\Controllers\KatalogController::class)->middleware('auth');
 
-Route::get('/katalog/{id}/edit', [KatalogController::class, 'edit'])->name('admin/katalog-edit');
-Route::put('/katalog/{id}', [KatalogController::class, 'update'])->name('katalog.update');
+Route::get('/katalog', [UserKatalogController::class, 'index'])->name('katalog.index');
+
+
+Route::get('/pesanan/create', [PesananController::class, 'create'])->name('pesanan.create');
+Route::post('/pesanan/store', [PesananController::class, 'store'])->name('pesanan.store');
+
+
+
 
 require __DIR__.'/auth.php';

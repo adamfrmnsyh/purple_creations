@@ -10,33 +10,31 @@
   <title>Document</title>
 </head>
 
-<body class="w-full min-h-screen overflow-x-hidden">
-  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
-  <div class="w-full px-12">
-    <div class="flex h-16 items-center justify-between">
+<body class="min-h-screen overflow-x-hidden bg-purple-100">
 
-      <!-- Logo -->
-      <div class="flex items-center">
-        <a class="block text-teal-600" href="#">
-          <span class="sr-only">Home</span>
-          <img src="img/logo.svg" alt="" class="h-20">
+  <!-- Navbar Fixed -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-purple-100 backdrop-blur-md">
+    <div class="w-full max-w-7xl mx-auto px-6">
+      <div class="flex h-20 items-center justify-between">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="img/logo.svg" alt="Logo" class="h-24">
         </a>
-      </div>
 
-      <!-- Menu -->
-      <div class="hidden md:block">
-        <nav aria-label="Global">
+        <!-- Menu -->
+        <nav class="hidden md:block mx-3">
           <ul class="flex items-center gap-8 text-md font-medium">
-            <li><a class=" text-white hover:text-gray-700" href="/">Beranda</a></li>
-            <li><a class=" text-white hover:text-gray-700" href="/katalog">Katalog</a></li>
-            <li><a class=" text-white hover:text-gray-700" href="#">Tentang Kami</a></li>
-            <li><a class=" text-white hover:text-gray-700" href="#">Kontak Kami</a></li>
+            <li><a class="text-gray-700 hover:text-[#de8bf3]" href="/">Beranda</a></li>
+            <li><a class="text-gray-700 hover:text-[#de8bf3]" href="/katalog">Katalog</a></li>
+            <li><a class="text-gray-700 hover:text-[#de8bf3]" href="#">Tentang Kami</a></li>
+            <li><a class="text-gray-700 hover:text-[#de8bf3]" href="#">Kontak Kami</a></li>
           </ul>
         </nav>
+
       </div>
-
     </div>
-  </div>
-</header>
+  </header>
 
-
+  <!-- Spacer for fixed navbar -->
+  <div class="h-20"></div>
