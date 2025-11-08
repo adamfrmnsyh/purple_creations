@@ -1,7 +1,7 @@
 <x-navbar />
 
 <!-- Hero Section -->
-<div class="bg-[#f4d7d7] min-h-[180px] flex items-center">
+<div class="bg-purple-100 min-h-[180px] flex items-center">
     <div class="px-10 mt-10">
         <h1 class="text-white text-4xl font-bold">Katalog Produk</h1>
         <p class="text-white/90 mt-2 text-lg">Temukan rangkaian bunga terbaik untuk momen spesialmu 🌸</p>
@@ -9,8 +9,8 @@
 </div>
 
 <!-- Content -->
-<div class="bg-[#ffff] p-6">
-    <div class="max-w-7xl mx-auto bg-[#b8ee71] rounded-xl">
+<div class="bg-purple-100 p-6">
+    <div class="max-w-7xl mx-auto bg-[#abe257] rounded-xl">
         <!-- Catalog Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
 

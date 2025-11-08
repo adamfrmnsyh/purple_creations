@@ -24,28 +24,28 @@ class PesananController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Nama' => 'required|string|max:255',
-            'Email' => 'required|email',
-            'Alamat' => 'required|string',
-            'No_Telp' => 'required|string',
-            'Nama_Produk' => 'required|string',
-            'Harga' => 'required|numeric',
-            'tgl_Kirim' => 'required|date',
-            'Tipe_Pembelian' => 'required|string',
+            'nama' => 'required|string|max:255',
+            'email' => 'required|email',
+            'alamat' => 'required|string',
+            'no_telp' => 'required|string',
+            'nama_produk' => 'required|string',
+            'harga' => 'required|numeric',
+            'tgl_kirim' => 'required|date',
+            'tipe_pembelian' => 'required|string',
         ]);
 
         Pesanan::create([
-            'Nama' => $request->Nama,
-            'Email' => $request->Email,
-            'Alamat' => $request->Alamat,
-            'No_Telp' => $request->No_Telp,
-            'Nama_Produk' => $request->Nama_Produk,
-            'Jenis' => $request->Jenis,
-            'Harga' => $request->Harga,
-            'tgl_Kirim' => $request->tgl_Kirim,
-            'Catatan' => $request->Catatan,
-            'Tipe_Pembelian' => $request->Tipe_Pembelian,
-            'ID_Katalog' => $request->ID_Katalog ?? null,
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
+            'nama_produk' => $request->nama_produk,
+            'jenis' => $request->jenis,
+            'harga' => $request->harga,
+            'tgl_kirim' => $request->tgl_kirim,
+            'catatan' => $request->catatan,
+            'tipe_pembelian' => $request->tipe_pembelian,
+            'id_katalog' => $request->id_katalog ?? null,
         ]);
 
         return redirect()->back()->with('success', 'Pesanan berhasil dikirim! 🌸');

@@ -47,38 +47,38 @@
             {{-- Bagian Data Pemesan --}}
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Nama Pemesan</label>
-                <input type="text" name="Nama" class="w-full border border-gray-300 p-2 rounded" required>
+                <input type="text" name="nama" class="w-full border border-gray-300 p-2 rounded" required>
             </div>
 
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Email</label>
-                <input type="email" name="Email" class="w-full border border-gray-300 p-2 rounded" required>
+                <input type="email" name="email" class="w-full border border-gray-300 p-2 rounded" required>
             </div>
 
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Alamat</label>
-                <textarea name="Alamat" class="w-full border border-gray-300 p-2 rounded" rows="3" required></textarea>
+                <textarea name="alamat" class="w-full border border-gray-300 p-2 rounded" rows="3" required></textarea>
             </div>
 
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Nomor Telepon</label>
-                <input type="text" name="No_Telp" class="w-full border border-gray-300 p-2 rounded" required>
+                <input type="text" name="no_telp" class="w-full border border-gray-300 p-2 rounded" required>
             </div>
 
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Tanggal Kirim</label>
-                <input type="date" name="tgl_Kirim" class="w-full border border-gray-300 p-2 rounded" required>
+                <input type="date" name="tgl_kirim" class="w-full border border-gray-300 p-2 rounded" required>
             </div>
 
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Catatan</label>
-                <textarea name="Catatan" class="w-full border border-gray-300 p-2 rounded" rows="3"></textarea>
+                <textarea name="catatan" class="w-full border border-gray-300 p-2 rounded" rows="3"></textarea>
             </div>
 
             {{-- Pilihan Tipe Pembelian --}}
             <div class="mb-6">
                 <label class="block text-gray-700 font-semibold mb-1">Tipe Pembelian</label>
-                <select name="Tipe_Pembelian" class="w-full border border-gray-300 p-2 rounded" required>
+                <select name="tipe_pembelian" class="w-full border border-gray-300 p-2 rounded" required>
                     <option value="">-- Pilih Tipe Pembelian --</option>
                     <option value="Antar">Antar</option>
                     <option value="Ambil Sendiri">Ambil Sendiri</option>

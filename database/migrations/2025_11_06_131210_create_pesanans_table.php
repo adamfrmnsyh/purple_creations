@@ -10,21 +10,21 @@ return new class extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
-            $table->string('Nama');
-            $table->string('Email');
-            $table->text('Alamat');
-            $table->string('No_Telp');
-            $table->string('Nama_Produk');
-            $table->string('Jenis')->nullable();
-            $table->decimal('Harga', 12, 2);
-            $table->date('tgl_Kirim');
-            $table->text('Catatan')->nullable();
-            $table->string('Tipe_Pembelian');
-            $table->string('ID_Katalog')->nullable();
+            $table->string('nama');
+            $table->string('email');
+            $table->text('alamat');
+            $table->string('no_telp');
+            $table->string('nama_produk');
+            $table->string('jenis')->nullable();
+            $table->decimal('harga', 12, 2);
+            $table->date('tgl_kirim');
+            $table->text('catatan')->nullable();
+            $table->string('tipe_pembelian');
+            $table->string('id_katalog')->nullable();
             $table->timestamps();
 
             // Jika kamu punya tabel katalog
-            $table->foreign('ID_Katalog')->references('id_katalog')->on('katalogs')->onDelete('set null');
+            $table->foreign('id_katalog')->references('id_katalog')->on('katalogs')->onDelete('set null');
         });
     }
 

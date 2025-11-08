@@ -12,17 +12,17 @@ class Pesanan extends Model
     protected $table = 'pesanans';
 
     protected $fillable = [
-        'Nama',
-        'Email',
-        'Alamat',
-        'No_Telp',
-        'Nama_Produk',
-        'Jenis',
-        'Harga',
-        'tgl_Kirim',
-        'Catatan',
-        'Tipe_Pembelian',
-        'ID_Katalog',
+        'nama',
+        'email',
+        'alamat',
+        'no_telp',
+        'nama_produk',
+        'jenis',
+        'harga',
+        'tgl_kirim',
+        'catatan',
+        'tipe_pembelian',
+        'id_katalog',
     ];
 
     public function katalog()

@@ -1,11 +1,11 @@
 <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
-    style="background: linear-gradient(180deg, #9B5DE0 0%, #FFD5D5 100%);">
+    style="background: linear-gradient(180deg, #FDCFFA 0%, #DD7BDF 100%);">
 
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon">
+                    <img src="../img/logo.svg" alt="">
                 </div>
                 <div class="sidebar-brand-text mx-3">Purple Creations</div>
             </a>
@@ -15,9 +15,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/dashboard">
+                <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span class="hover:text-[#de8bf3]">Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -25,7 +25,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Manajemen Data
+                <span>Manajemen Data</span>
             </div>
             
 
@@ -33,13 +33,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="/admin/katalog">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Katalog</span></a>
+                    <span class="font-weight-bold hover:text-[#de8bf3]">Katalog</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/riwayat_pesanan">
+                <a class="nav-link" href="/admin/pesanan">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Riwayat Pesanan</span></a>
+                    <span class="font-weight-bold hover:text-[#de8bf3]">Riwayat Pesanan</span></a>
             </li>
 
             <!-- Divider -->
