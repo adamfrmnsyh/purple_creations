@@ -44,7 +44,7 @@
                         <td>{{ $item->alamat }}</td>
                         <td>{{ $item->no_telp }}</td>
                         <td>{{ $item->nama_produk }}</td>
-                        <td>{{ $item->jenis_bunga }}</td>
+                        <td>{{ $item->jenis }}</td>
                         <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->tgl_kirim)->format('d/m/Y') }}</td>
                         <td>{{ $item->tipe_pembelian }}</td>

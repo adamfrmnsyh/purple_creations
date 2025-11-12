@@ -4,7 +4,7 @@
 
 <div class="p-6 mt-8 md:flex-row items-center gap-6">
     <div>
-        <h2 class="text-3xl font-semibold text-green-800 mb-2 text-center">Our Best Seller</h2>
+        <h2 class="text-5xl font-semibold text-black mb-2 text-center font-lobster">Our Best Seller</h2>
         <p class="text-gray-700 mb-2 mt-3 text-center">
             Our Party Package is perfect for any event corporate and holiday events, baby & bridal showers, engagement parties, birthday soirees, or bar/bat mitzvahs!
         </p>
