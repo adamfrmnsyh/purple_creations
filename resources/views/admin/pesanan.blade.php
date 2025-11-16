@@ -11,19 +11,56 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <h6 class="m-0 font-weight-bold text-primary">Daftar Pesanan</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Filter & Daftar Pesanan</h6>
     </div>
 
     <div class="card-body">
+        <!-- Filter Form -->
+        <form method="GET" action="{{ route('admin.pesanan.index') }}" class="mb-4 d-flex align-items-end gap-3 flex-wrap">
+            <div>
+                <label for="tanggal_awal" class="form-label">Tanggal Awal</label>
+                <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control"
+                    value="{{ request('tanggal_awal') }}">
+            </div>
+            <div>
+                <label for="tanggal_akhir" class="form-label">Tanggal Akhir</label>
+                <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control"
+                    value="{{ request('tanggal_akhir') }}">
+            </div>
+            <div>
+                <label for="status" class="form-label">Status</label>
+                <select name="status" id="status" class="form-select">
+                    <option value="Semua" {{ request('status') == 'Semua' ? 'selected' : '' }}>Semua</option>
+                    <option value="Belum ACC" {{ request('status') == 'Belum ACC' ? 'selected' : '' }}>Belum ACC</option>
+                    <option value="Sudah ACC" {{ request('status') == 'Sudah ACC' ? 'selected' : '' }}>Sudah ACC</option>
+                    <option value="Dibatalkan" {{ request('status') == 'Dibatalkan' ? 'selected' : '' }}>Dibatalkan</option>
+                </select>
+            </div>
+
+            <div class="d-flex gap-2 align-items-end">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a href="{{ route('admin.pesanan.index') }}" class="btn btn-secondary">Reset</a>
+            </div>
+
+            @if($pesanans->count() > 0)
+            <div class="ms-auto">
+                <a href="{{ route('admin.pesanan.export', request()->query()) }}" class="btn btn-success">
+                    Download CSV
+                </a>
+            </div>
+            @endif
+        </form>
+
+        <!-- Tabel Data -->
         <div class="table-responsive">
-            <table class="table table-bordered" width="100%">
+            <table class="table table-bordered">
                 <thead class="table-primary">
                     <tr>
                         <th>ID</th>
                         <th>Nama Pemesan</th>
                         <th>Email</th>
                         <th>Alamat</th>
-                        <th>Nomor Telepon</th>
+                        <th>No. Telp</th>
                         <th>Nama Produk</th>
                         <th>Jenis Bunga</th>
                         <th>Harga</th>
@@ -32,7 +69,6 @@
                         <th>Tipe Pembelian</th>
                         <th>Pesanan Dibuat</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,10 +83,9 @@
                         <td>{{ $item->jenis }}</td>
                         <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->tgl_kirim)->format('d/m/Y') }}</td>
-                        <td>{{ $item->tipe_pembelian }}</td>
                         <td>{{ $item->catatan }}</td>
+                        <td>{{ $item->tipe_pembelian }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y H:i') }}</td>
-
                         <td>
                             @if ($item->status == 'Sudah ACC')
                                 <span class="badge bg-success text-light">Sudah ACC</span>
@@ -60,22 +95,10 @@
                                 <span class="badge bg-warning text-dark">Belum ACC</span>
                             @endif
                         </td>
-                        <td>
-                            <form action="{{ route('admin.pesanan.updateStatus', $item->id) }}" method="POST" class="d-flex">
-                                @csrf
-                                @method('PUT')
-                                <select name="status" class="form-select form-select-sm me-2">
-                                    <option value="Belum ACC" {{ $item->status == 'Belum ACC' ? 'selected' : '' }}>Belum ACC</option>
-                                    <option value="Sudah ACC" {{ $item->status == 'Sudah ACC' ? 'selected' : '' }}>Sudah ACC</option>
-                                    <option value="Dibatalkan" {{ $item->status == 'Dibatalkan' ? 'selected' : '' }}>Dibatalkan</option>
-                                </select>
-                                <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                            </form>
-                        </td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="8" class="text-center text-muted">Belum ada pesanan</td>
+                        <td colspan="13" class="text-center text-muted">Belum ada pesanan</td>
                     </tr>
                     @endforelse
                 </tbody>

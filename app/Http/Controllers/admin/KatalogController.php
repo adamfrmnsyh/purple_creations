@@ -10,11 +10,19 @@ use Illuminate\Support\Facades\Storage;
 
 class KatalogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $katalogs = Katalog::orderBy('created_at', 'desc')->get();
+        $query = Katalog::orderBy('created_at', 'desc');
+
+        if ($request->filled('jenis')) {
+            $query->where('jenis', $request->jenis);
+        }
+
+        $katalogs = $query->get();
+
         return view('admin.katalog', compact('katalogs'));
     }
+
 
     public function create()
     {
