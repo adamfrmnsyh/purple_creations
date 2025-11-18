@@ -138,6 +138,54 @@
   });
 </script>
 
+<script>
+  const video = document.getElementById('video1');
+  const thumb = document.getElementById('thumb');
+  const playBtn = document.getElementById('playBtn');
+  const volumeBox = document.getElementById('volumeBox');
+  const volumeControl = document.getElementById('volumeControl');
+
+  // Default volume
+  video.volume = 0.7;
+
+  // --- PLAY (Thumbnail atau Play Button) ---
+  function startVideo() {
+    thumb.classList.add('hidden');
+    playBtn.classList.add('hidden');
+    video.classList.remove('hidden');
+    volumeBox.classList.remove('hidden');
+    video.controls = false;
+    video.play();
+  }
+
+  playBtn.addEventListener('click', startVideo);
+  thumb.addEventListener('click', startVideo);
+
+  // --- SHOW PLAY BUTTON SAAT VIDEO PAUSE ---
+  video.addEventListener('pause', () => {
+    if (!thumb.classList.contains('hidden')) return; // masih thumbnail
+    playBtn.classList.remove('hidden');
+  });
+
+  // --- VOLUME CONTROL ---
+  volumeControl.addEventListener('input', function() {
+    video.volume = this.value;
+  });
+
+  // --- AUTO PAUSE ketika video keluar dari layar ---
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting && !video.paused) {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(video);
+</script>
+
 </body>
 
 </html>

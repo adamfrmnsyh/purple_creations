@@ -1,16 +1,45 @@
 <x-navbar />
 
-<!-- Hero Section -->
-<div class="bg-white min-h-[180px] flex items-center justify-center">
-    <div class="px-5">
-        <h1 class="text-black text-7xl font-bold font-lobster">Our Catalog</h1>
+<x-hero-catalog />
+
+<!-- Content -->
+
+<div class="relative inline-block text-left pl-10">
+    <button id="dropdownBtn" class="px-4 py-2 border rounded-lg">
+        ALL
+    </button>
+
+    <div id="dropdownMenu" class="hidden absolute mt-2 w-40 bg-white shadow-lg rounded-lg">
+        <button class="dropdown-item block w-full text-left px-4 py-2" data-category="all">All</button>
+        <button class="dropdown-item block w-full text-left px-4 py-2" data-category="board">Board Flower</button>
+        <button class="dropdown-item block w-full text-left px-4 py-2" data-category="standing">Standing Flower</button>
+        <button class="dropdown-item block w-full text-left px-4 py-2" data-category="table">Table Flower</button>
     </div>
 </div>
 
-<!-- Content -->
-<div class="bg-white p-3">
+<div class="grid grid-cols-4 gap-6 mt-6" id="productList">
+
+    <div class="product-card" data-category="board">
+        <img src="img/board1.jpg" class="w-full">
+        <p class="text-center">KARANGAN 1</p>
+    </div>
+
+    <div class="product-card" data-category="standing">
+        <img src="img/standing1.jpg" class="w-full">
+        <p class="text-center">KARANGAN 2</p>
+    </div>
+
+    <div class="product-card" data-category="table">
+        <img src="img/table1.jpg" class="w-full">
+        <p class="text-center">KARANGAN 3</p>
+    </div>
+
+</div>
+
+<!--
+<div class="bg-white p-3 mt-20">
     <div class="max-w-7xl mx-auto bg-[#ffff] rounded-xl p-6 mt-[-30px]">
-        <!-- Swiper Container -->
+        
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
@@ -41,6 +70,36 @@
         </div>
     </div>
 </div>
+  -->
 
+  <script>
+  const dropdownBtn = document.getElementById("dropdownBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  const items = document.querySelectorAll(".dropdown-item");
+  const products = document.querySelectorAll(".product-card");
+
+  dropdownBtn.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("hidden");
+  });
+
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      const category = item.dataset.category;
+
+      dropdownBtn.textContent = item.textContent; // Ubah text header
+
+      // Filter produk
+      products.forEach(product => {
+        if (category === "all" || product.dataset.category === category) {
+          product.classList.remove("hidden");
+        } else {
+          product.classList.add("hidden");
+        }
+      });
+
+      dropdownMenu.classList.add("hidden");
+    });
+  });
+</script>
 
 <x-footer />

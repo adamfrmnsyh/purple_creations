@@ -21,7 +21,7 @@
 
         <!-- Logo -->
         <a href="/" class="flex items-center">
-          <img src="img/logo.svg" alt="Logo" class="h-24">
+          <img src="img/logopc.png" alt="Logo" class="h-24">
         </a>
 
         <!-- Menu -->
