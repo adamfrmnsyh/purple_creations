@@ -8,6 +8,7 @@ use App\Http\Controllers\PesananController;
 use App\Http\Controllers\Admin\PesananController as PesananAdminController;
 
 Route::get('/', fn() => view('home.index'));
+Route::get('/aboutUs', fn() => view('home.aboutUs'));
 Route::get('/katalog', [UserKatalogController::class, 'index'])->name('katalog.index');
 
 // ✅ Admin area
@@ -33,5 +34,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/export-katalog', function () {
+    $data = \App\Models\Katalog::all();
+
+    file_put_contents(
+        base_path('database/seeders/katalog.json'),
+        $data->toJson(JSON_PRETTY_PRINT)
+    );
+
+    return "Data katalog berhasil diexport!";
+});
+
 
 require __DIR__.'/auth.php';

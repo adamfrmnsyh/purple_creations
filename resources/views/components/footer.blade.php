@@ -118,73 +118,158 @@
 
 <script>
   const navbar = document.getElementById('navbar');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('overlay');
+  const closeMenu = document.getElementById('close-menu');
 
+  // Navbar change background & link color on scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('bg-white', 'shadow-md');
       navbar.classList.remove('bg-transparent');
+
       navbar.querySelectorAll('a').forEach(a => {
         a.classList.remove('text-[#4f056c]');
         a.classList.add('text-gray-700');
       });
+
     } else {
       navbar.classList.remove('bg-white', 'shadow-md');
       navbar.classList.add('bg-transparent');
+
       navbar.querySelectorAll('a').forEach(a => {
         a.classList.remove('text-gray-700');
         a.classList.add('text-[#4f056c]');
       });
     }
   });
+
+  // Open Mobile Menu
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
+  });
+
+  // Close Mobile Menu
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
+
+  // Close when clicking overlay
+  overlay.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+  });
 </script>
 
 <script>
-  const video = document.getElementById('video1');
-  const thumb = document.getElementById('thumb');
-  const playBtn = document.getElementById('playBtn');
-  const volumeBox = document.getElementById('volumeBox');
-  const volumeControl = document.getElementById('volumeControl');
+document.addEventListener("DOMContentLoaded", () => {
 
-  // Default volume
-  video.volume = 0.7;
+  /* ===========================
+        VIDEO 1 (LANDSCAPE)
+     =========================== */
 
-  // --- PLAY (Thumbnail atau Play Button) ---
-  function startVideo() {
-    thumb.classList.add('hidden');
-    playBtn.classList.add('hidden');
-    video.classList.remove('hidden');
-    volumeBox.classList.remove('hidden');
-    video.controls = false;
-    video.play();
+  const video1 = document.getElementById('video1');
+  const thumb1 = document.getElementById('thumb');
+  const playBtn1 = document.getElementById('playBtn');
+  const volumeBox1 = document.getElementById('volumeBox');
+  const volumeControl1 = document.getElementById('volumeControl');
+
+  // default volume
+  video1.volume = 0.5;
+
+  function startVideo1() {
+    thumb1.classList.add("hidden");
+    playBtn1.classList.add("hidden");
+    video1.classList.remove("hidden");
+    volumeBox1.classList.remove("hidden");
+    video1.controls = false;
+    video1.play();
   }
 
-  playBtn.addEventListener('click', startVideo);
-  thumb.addEventListener('click', startVideo);
+  playBtn1.addEventListener("click", startVideo1);
+  thumb1.addEventListener("click", startVideo1);
 
-  // --- SHOW PLAY BUTTON SAAT VIDEO PAUSE ---
-  video.addEventListener('pause', () => {
-    if (!thumb.classList.contains('hidden')) return; // masih thumbnail
-    playBtn.classList.remove('hidden');
+  // Show play button when paused
+  video1.addEventListener("pause", () => {
+    if (!thumb1.classList.contains("hidden")) return;
+    playBtn1.classList.remove("hidden");
   });
 
-  // --- VOLUME CONTROL ---
-  volumeControl.addEventListener('input', function() {
-    video.volume = this.value;
+  // Volume control
+  volumeControl1.addEventListener("input", () => {
+    video1.volume = volumeControl1.value;
   });
 
-  // --- AUTO PAUSE ketika video keluar dari layar ---
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting && !video.paused) {
-        video.pause();
-      }
-    });
-  }, {
-    threshold: 0.2
+  // Auto-pause when out of view
+  const observer1 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting && !video1.paused) {
+          video1.pause();
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer1.observe(video1);
+
+
+  /* ===========================
+        VIDEO 2 (PORTRAIT)
+     =========================== */
+
+  const video2 = document.getElementById("videoPortrait");
+  const thumb2 = document.getElementById("thumbPortrait");
+  const playBtn2 = document.getElementById("playBtnPortrait");
+  const volumeBox2 = document.getElementById("volumeBoxPortrait");
+  const volumeControl2 = document.getElementById("volumeControlPortrait");
+
+  // default volume
+  video2.volume = 0.7;
+
+  function startVideo2() {
+    thumb2.classList.add("hidden");
+    playBtn2.classList.add("hidden");
+    video2.classList.remove("hidden");
+    volumeBox2.classList.remove("hidden");
+    video2.controls = false;
+    video2.play();
+  }
+
+  playBtn2.addEventListener("click", startVideo2);
+  thumb2.addEventListener("click", startVideo2);
+
+  // Show play button when paused
+  video2.addEventListener("pause", () => {
+    if (!thumb2.classList.contains("hidden")) return;
+    playBtn2.classList.remove("hidden");
   });
 
-  observer.observe(video);
+  // Volume
+  volumeControl2.addEventListener("input", () => {
+    video2.volume = volumeControl2.value;
+  });
+
+  // Auto-pause when keluar layar
+  const observer2 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting && !video2.paused) {
+          video2.pause();
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer2.observe(video2);
+});
 </script>
+
 
 </body>
 

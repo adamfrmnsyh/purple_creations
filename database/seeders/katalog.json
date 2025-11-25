@@ -1,0 +1,432 @@
+[
+    {
+        "id_katalog": "BM01",
+        "nama_produk": "Bunga Meja A",
+        "jenis": "Bunga Meja",
+        "harga": "700000.00",
+        "gambar": "katalog\/0PioYjzqnx8iIySnOED58NaABxmII1sQZvLCoNqp.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:48:49.000000Z",
+        "updated_at": "2025-11-19T07:48:49.000000Z"
+    },
+    {
+        "id_katalog": "BM02",
+        "nama_produk": "Bunga Meja B",
+        "jenis": "Bunga Meja",
+        "harga": "700000.00",
+        "gambar": "katalog\/jcWGzUcYRNyJjLdoq0WPS933G3GQhy9oeNIjBZpo.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:48:12.000000Z",
+        "updated_at": "2025-11-19T07:48:12.000000Z"
+    },
+    {
+        "id_katalog": "BM03",
+        "nama_produk": "Bunga Meja C",
+        "jenis": "Bunga Meja",
+        "harga": "700000.00",
+        "gambar": "katalog\/HixfDDYKWGUSCBdOeMI9rB1M80QZ52OQAg0CPdqj.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:47:11.000000Z",
+        "updated_at": "2025-11-20T03:53:50.000000Z"
+    },
+    {
+        "id_katalog": "BM04",
+        "nama_produk": "Bunga Meja D",
+        "jenis": "Bunga Meja",
+        "harga": "1200000.00",
+        "gambar": "katalog\/SQbCzD9RRxxBQbnHiIDZSnTgASndxkHXwniOyedw.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:46:27.000000Z",
+        "updated_at": "2025-11-19T07:46:27.000000Z"
+    },
+    {
+        "id_katalog": "BM05",
+        "nama_produk": "Bunga Meja E",
+        "jenis": "Bunga Meja",
+        "harga": "900000.00",
+        "gambar": "katalog\/XHAUAvF66aMlpcZ8yIAS9dfwymDCJ4JsZ5Blg31b.png",
+        "status": 1,
+        "created_at": "2025-11-18T13:06:23.000000Z",
+        "updated_at": "2025-11-18T13:06:23.000000Z"
+    },
+    {
+        "id_katalog": "BM06",
+        "nama_produk": "Bunga Meja F",
+        "jenis": "Bunga Meja",
+        "harga": "750000.00",
+        "gambar": "katalog\/bHVGFjCMKWeoEYqOzTSbq2Ok8PUgwwMnR95EvfLl.png",
+        "status": 1,
+        "created_at": "2025-11-18T13:05:36.000000Z",
+        "updated_at": "2025-11-18T13:05:36.000000Z"
+    },
+    {
+        "id_katalog": "BM07",
+        "nama_produk": "Bunga Meja G",
+        "jenis": "Bunga Meja",
+        "harga": "700000.00",
+        "gambar": "katalog\/CZfDeYMcaMHIf95hqO3BNYYs5JbZRNp3rW00MoTM.png",
+        "status": 1,
+        "created_at": "2025-11-18T13:04:59.000000Z",
+        "updated_at": "2025-11-18T13:04:59.000000Z"
+    },
+    {
+        "id_katalog": "BM08",
+        "nama_produk": "Bunga Meja H",
+        "jenis": "Bunga Meja",
+        "harga": "850000.00",
+        "gambar": "katalog\/JBIRwi3NUwjXh1Z90G3zy8NcbvnHhnsEoseK0YyB.png",
+        "status": 1,
+        "created_at": "2025-11-18T13:03:40.000000Z",
+        "updated_at": "2025-11-18T13:03:40.000000Z"
+    },
+    {
+        "id_katalog": "BP01",
+        "nama_produk": "Bunga Papan A",
+        "jenis": "Bunga Papan",
+        "harga": "500000.00",
+        "gambar": "katalog\/X3rZiYedbyPjWRPGAemTi4b6aGm1pAeOijFXurIR.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:55:57.000000Z",
+        "updated_at": "2025-11-19T07:55:57.000000Z"
+    },
+    {
+        "id_katalog": "BP02",
+        "nama_produk": "Bunga Papan B",
+        "jenis": "Bunga Papan",
+        "harga": "500000.00",
+        "gambar": "katalog\/IAKjQKvmhx2rnR0undqWWuCOenndH8QwnM78Y4LS.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:55:22.000000Z",
+        "updated_at": "2025-11-19T07:55:22.000000Z"
+    },
+    {
+        "id_katalog": "BP03",
+        "nama_produk": "Bunga Papan C",
+        "jenis": "Bunga Papan",
+        "harga": "500000.00",
+        "gambar": "katalog\/WsrihMjQedaA3ZxLBUYh6D5Vp4EeHR1W4csxGZHX.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:54:50.000000Z",
+        "updated_at": "2025-11-19T07:54:50.000000Z"
+    },
+    {
+        "id_katalog": "BP04",
+        "nama_produk": "Bunga Papan D",
+        "jenis": "Bunga Papan",
+        "harga": "500000.00",
+        "gambar": "katalog\/Oc5ZHkBISiCJ8moIRADlr1yLSSZxmdKXTNbcnGr7.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:54:21.000000Z",
+        "updated_at": "2025-11-19T07:54:21.000000Z"
+    },
+    {
+        "id_katalog": "BP05",
+        "nama_produk": "Bunga Papan E",
+        "jenis": "Bunga Papan",
+        "harga": "1000000.00",
+        "gambar": "katalog\/F11ThIR7zxXPiORSrTqt7jNxKHXCzSRbpLV9fDcM.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:53:26.000000Z",
+        "updated_at": "2025-11-19T07:53:26.000000Z"
+    },
+    {
+        "id_katalog": "BP06",
+        "nama_produk": "Bunga Papan F",
+        "jenis": "Bunga Papan",
+        "harga": "1000000.00",
+        "gambar": "katalog\/sKsAVNpcrEJ83wTT3vBkbfos7ySfNpUXumk4ezP1.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:51:53.000000Z",
+        "updated_at": "2025-11-19T07:51:53.000000Z"
+    },
+    {
+        "id_katalog": "BP07",
+        "nama_produk": "Bunga Papan G",
+        "jenis": "Bunga Papan",
+        "harga": "700000.00",
+        "gambar": "katalog\/HiBmgQJQbr9nPdKXiuTgvbjcbfWdZpe9h1eKGeB9.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:51:21.000000Z",
+        "updated_at": "2025-11-19T07:51:21.000000Z"
+    },
+    {
+        "id_katalog": "BP08",
+        "nama_produk": "Bunga Papan H",
+        "jenis": "Bunga Papan",
+        "harga": "700000.00",
+        "gambar": "katalog\/cpgObeUnHng1AdckzfNsbLu19iuAcnEvIeAgtz3W.png",
+        "status": 1,
+        "created_at": "2025-11-19T07:50:24.000000Z",
+        "updated_at": "2025-11-19T07:50:24.000000Z"
+    },
+    {
+        "id_katalog": "HB01",
+        "nama_produk": "Handbouquet A",
+        "jenis": "Handbouquet",
+        "harga": "500000.00",
+        "gambar": "katalog\/VmCzaJLGQlTA64NVso8QJCuXGOp6HqPHmwlUyQMj.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:19:31.000000Z",
+        "updated_at": "2025-11-19T13:19:31.000000Z"
+    },
+    {
+        "id_katalog": "HB02",
+        "nama_produk": "Handbouquet B",
+        "jenis": "Handbouquet",
+        "harga": "600000.00",
+        "gambar": "katalog\/PZQ8i70gT7KhwxDiOxDsIVoA2JFBrURKePwNFfrx.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:19:06.000000Z",
+        "updated_at": "2025-11-19T13:19:06.000000Z"
+    },
+    {
+        "id_katalog": "HB03",
+        "nama_produk": "Handbouquet C",
+        "jenis": "Handbouquet",
+        "harga": "650000.00",
+        "gambar": "katalog\/vHzoTjpNP3py5EZSWvwGliascJkOnGJ6bmZEWxsN.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:16:52.000000Z",
+        "updated_at": "2025-11-19T13:16:52.000000Z"
+    },
+    {
+        "id_katalog": "HB04",
+        "nama_produk": "Handbouquet D",
+        "jenis": "Handbouquet",
+        "harga": "500000.00",
+        "gambar": "katalog\/5XEuc3ryAWdWTsrJcAVBUZcuRcx8tHgBb86ZOWz9.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:16:25.000000Z",
+        "updated_at": "2025-11-19T13:16:25.000000Z"
+    },
+    {
+        "id_katalog": "HB05",
+        "nama_produk": "Handbouquet E",
+        "jenis": "Handbouquet",
+        "harga": "750000.00",
+        "gambar": "katalog\/CvDXYNfeu2wimItSdUbNsNPjnwUIFxzlE7EIpbMd.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:15:55.000000Z",
+        "updated_at": "2025-11-19T13:15:55.000000Z"
+    },
+    {
+        "id_katalog": "HB06",
+        "nama_produk": "Handbouquet F",
+        "jenis": "Handbouquet",
+        "harga": "450000.00",
+        "gambar": "katalog\/FKFFUGCPMGF2SEGXYM8EYR34cDPwIxW1YgqoxblG.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:14:58.000000Z",
+        "updated_at": "2025-11-19T13:14:58.000000Z"
+    },
+    {
+        "id_katalog": "HB07",
+        "nama_produk": "Handbouquet G",
+        "jenis": "Handbouquet",
+        "harga": "500000.00",
+        "gambar": "katalog\/HaVtxrCtvkVTmoC0NqIBERI23EzgYTXSxQTukmGT.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:14:28.000000Z",
+        "updated_at": "2025-11-19T13:14:28.000000Z"
+    },
+    {
+        "id_katalog": "HB08",
+        "nama_produk": "Handbouquet H",
+        "jenis": "Handbouquet",
+        "harga": "500000.00",
+        "gambar": "katalog\/Dv6uvH49a2CZM24SzRDAKaUMKbvHm1BhCp4UFl1R.png",
+        "status": 1,
+        "created_at": "2025-11-19T13:13:35.000000Z",
+        "updated_at": "2025-11-19T13:13:52.000000Z"
+    },
+    {
+        "id_katalog": "HBB01",
+        "nama_produk": "Hampers Baby Born A",
+        "jenis": "Hampers Baby Born",
+        "harga": "700000.00",
+        "gambar": "katalog\/HisPRPHfX7PetEm7BXyeaY4bB68Ik9P8Ob5QmOLA.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:45:36.000000Z",
+        "updated_at": "2025-11-20T04:45:36.000000Z"
+    },
+    {
+        "id_katalog": "HBB02",
+        "nama_produk": "Hampers Baby Born B",
+        "jenis": "Hampers Baby Born",
+        "harga": "2000000.00",
+        "gambar": "katalog\/V3K4qC81jwpbuL2gpvBjRas9CgXVUnlkpJ6v7l4k.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:45:09.000000Z",
+        "updated_at": "2025-11-20T04:45:09.000000Z"
+    },
+    {
+        "id_katalog": "HBB03",
+        "nama_produk": "Hampers Baby Born C",
+        "jenis": "Hampers Baby Born",
+        "harga": "700000.00",
+        "gambar": "katalog\/ys4vIzdmyQcf7yk8jty3buLiZyCHDqkXTWCUGgbX.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:44:36.000000Z",
+        "updated_at": "2025-11-20T04:44:36.000000Z"
+    },
+    {
+        "id_katalog": "HBB04",
+        "nama_produk": "Hampers Baby Born D",
+        "jenis": "Hampers Baby Born",
+        "harga": "800000.00",
+        "gambar": "katalog\/eNV5reD75s0XBluhgxA0L7SWWprXAXKfVhF2IyQg.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:07:48.000000Z",
+        "updated_at": "2025-11-20T04:07:48.000000Z"
+    },
+    {
+        "id_katalog": "HBB05",
+        "nama_produk": "Hampers Baby Born E",
+        "jenis": "Hampers Baby Born",
+        "harga": "700000.00",
+        "gambar": "katalog\/hoW3F9xyD08lOOky9znq6OOZhvb9RyOhpYx9dmly.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:07:17.000000Z",
+        "updated_at": "2025-11-20T04:07:17.000000Z"
+    },
+    {
+        "id_katalog": "HBB06",
+        "nama_produk": "Hampers Baby Born F",
+        "jenis": "Hampers Baby Born",
+        "harga": "700000.00",
+        "gambar": "katalog\/XyfDzA4lRVqcMTJr6M3vR7CF4Zduyn8B8Gj0GXck.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:06:33.000000Z",
+        "updated_at": "2025-11-20T04:06:33.000000Z"
+    },
+    {
+        "id_katalog": "MB01",
+        "nama_produk": "Money Bouquet A",
+        "jenis": "Money Bouquet",
+        "harga": "250000.00",
+        "gambar": "katalog\/sRe1Q3m2fKF67zRK1mqAk4QnxQxza0MyrRx0k7ge.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:02:33.000000Z",
+        "updated_at": "2025-11-20T04:02:33.000000Z"
+    },
+    {
+        "id_katalog": "MB02",
+        "nama_produk": "Money Bouquet B",
+        "jenis": "Money Bouquet",
+        "harga": "250000.00",
+        "gambar": "katalog\/hZZE9p9pGGPAKw262cMZlzk407oGNTrWwgj9ybvQ.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:02:02.000000Z",
+        "updated_at": "2025-11-20T04:02:02.000000Z"
+    },
+    {
+        "id_katalog": "MB03",
+        "nama_produk": "Money Bouquet C",
+        "jenis": "Money Bouquet",
+        "harga": "700000.00",
+        "gambar": "katalog\/PNUZjzHlpx2NAZWYP92HQUtiYjHPahqTh9jUOvGU.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:01:04.000000Z",
+        "updated_at": "2025-11-20T04:01:04.000000Z"
+    },
+    {
+        "id_katalog": "PF09",
+        "nama_produk": "Paper Flower I",
+        "jenis": "Paper Flower",
+        "harga": "800000.00",
+        "gambar": "katalog\/xLgH9wL1ebKjUbZtq7QyIiUrhGaswsAttLjnTPJo.png",
+        "status": 1,
+        "created_at": "2025-11-20T13:29:31.000000Z",
+        "updated_at": "2025-11-20T13:29:31.000000Z"
+    },
+    {
+        "id_katalog": "PF10",
+        "nama_produk": "Paper Flower J",
+        "jenis": "Paper Flower",
+        "harga": "800000.00",
+        "gambar": "katalog\/LsFxmRkYTUctx0qBnOQwgs2KurPF7YlipFFTtk7D.png",
+        "status": 1,
+        "created_at": "2025-11-20T13:28:45.000000Z",
+        "updated_at": "2025-11-20T13:28:45.000000Z"
+    },
+    {
+        "id_katalog": "SF01",
+        "nama_produk": "Standing Flower A",
+        "jenis": "Standing Flower",
+        "harga": "850000.00",
+        "gambar": "katalog\/WDWUCaLo8409ktQisVuBBURxC1Cdi5zGSyfutiZq.png",
+        "status": 1,
+        "created_at": "2025-11-20T05:07:43.000000Z",
+        "updated_at": "2025-11-20T05:07:43.000000Z"
+    },
+    {
+        "id_katalog": "SF02",
+        "nama_produk": "Standing Flower B",
+        "jenis": "Standing Flower",
+        "harga": "850000.00",
+        "gambar": "katalog\/tiA9ibDQwUDoOOZEGPDMuhm6uxwkKC2nmTk3RenJ.png",
+        "status": 1,
+        "created_at": "2025-11-20T05:07:11.000000Z",
+        "updated_at": "2025-11-20T05:07:11.000000Z"
+    },
+    {
+        "id_katalog": "SF03",
+        "nama_produk": "Standing Flower C",
+        "jenis": "Standing Flower",
+        "harga": "850000.00",
+        "gambar": "katalog\/bFfNM6iCWk48Hju8xJ5RBUA9W8ofjGoTbHvSLILK.png",
+        "status": 1,
+        "created_at": "2025-11-20T05:06:33.000000Z",
+        "updated_at": "2025-11-20T05:06:33.000000Z"
+    },
+    {
+        "id_katalog": "SF04",
+        "nama_produk": "Standing Flower D",
+        "jenis": "Standing Flower",
+        "harga": "1700000.00",
+        "gambar": "katalog\/CGkjcMwkIK2ONm2lTZe0Km7D41AdZl2dngsCJYcG.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:59:39.000000Z",
+        "updated_at": "2025-11-20T04:59:39.000000Z"
+    },
+    {
+        "id_katalog": "SF05",
+        "nama_produk": "Standing Flower E",
+        "jenis": "Standing Flower",
+        "harga": "750000.00",
+        "gambar": "katalog\/dfnSbdLffiNeyf9dKyzmBBvAhfHUkEn30YieuleV.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:58:51.000000Z",
+        "updated_at": "2025-11-20T04:59:56.000000Z"
+    },
+    {
+        "id_katalog": "SF06",
+        "nama_produk": "Standing Flower F",
+        "jenis": "Standing Flower",
+        "harga": "800000.00",
+        "gambar": "katalog\/IKQE8s0qmitadMZTjsAryllpLEj9ePo3QzFgr6ZQ.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:58:10.000000Z",
+        "updated_at": "2025-11-20T04:58:10.000000Z"
+    },
+    {
+        "id_katalog": "SF07",
+        "nama_produk": "Standing Flower G",
+        "jenis": "Standing Flower",
+        "harga": "1000000.00",
+        "gambar": "katalog\/sFMDAKnJyGBRgJxQLVAZfnXJTvma0AnvnYw56ROS.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:55:55.000000Z",
+        "updated_at": "2025-11-20T04:55:55.000000Z"
+    },
+    {
+        "id_katalog": "SF08",
+        "nama_produk": "Standing Flower H",
+        "jenis": "Standing Flower",
+        "harga": "2200000.00",
+        "gambar": "katalog\/i5Cylxvsm2Hkmloi0b54LqsmWDoqGtuc5bPmYTSL.png",
+        "status": 1,
+        "created_at": "2025-11-20T04:54:25.000000Z",
+        "updated_at": "2025-11-20T04:54:25.000000Z"
+    }
+]

@@ -9,7 +9,17 @@ class KatalogController extends Controller
 {
     public function index()
     {
-        $produk = Katalog::all();
-        return view('home.katalog', compact('produk'));
+        $jenis = request()->query('jenis');
+
+        $produkQuery = Katalog::where('status', 1); // hanya produk aktif
+
+        // Jika memilih kategori tertentu
+        if ($jenis && $jenis !== 'all') {
+            $produkQuery->where('jenis', $jenis);
+        }
+
+        $produk = $produkQuery->get();
+
+        return view('home.katalog', compact('produk', 'jenis'));
     }
 }

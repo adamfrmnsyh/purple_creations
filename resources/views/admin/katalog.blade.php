@@ -23,15 +23,15 @@
                 <label for="jenis" class="form-label">Filter berdasarkan Jenis:</label>
                 <select name="jenis" id="jenis" class="form-control" onchange="document.getElementById('filterForm').submit()">
                     <option value="">-- Semua Jenis --</option>
-                    <option value="bunga papan" {{ request('jenis') == 'bunga papan' ? 'selected' : '' }}>Bunga Papan</option>
-                    <option value="standing flower" {{ request('jenis') == 'standing flower' ? 'selected' : '' }}>Standing Flower</option>
-                    <option value="bunga meja" {{ request('jenis') == 'bunga meja' ? 'selected' : '' }}>Bunga Meja</option>
-                    <option value="paper flower" {{ request('jenis') == 'paper flower' ? 'selected' : '' }}>Paper Flower</option>
-                    <option value="hand bouquet" {{ request('jenis') == 'hand bouquet' ? 'selected' : '' }}>Hand Bouquet</option>
-                    <option value="money bouquet" {{ request('jenis') == 'money bouquet' ? 'selected' : '' }}>Money Bouquet</option>
+                    <option value="Bunga Papan" {{ request('jenis') == 'Bunga Papan' ? 'selected' : '' }}>Bunga Papan</option>
+                    <option value="Standing Flower" {{ request('jenis') == 'Standing Flower' ? 'selected' : '' }}>Standing Flower</option>
+                    <option value="Bunga Meja" {{ request('jenis') == 'Bunga Meja' ? 'selected' : '' }}>Bunga Meja</option>
+                    <option value="Paper Flower" {{ request('jenis') == 'Paper Flower' ? 'selected' : '' }}>Paper Flower</option>
+                    <option value="Handbouquet" {{ request('jenis') == 'Handbouquet' ? 'selected' : '' }}>Handbouquet</option>
+                    <option value="Money Bouquet" {{ request('jenis') == 'Money Bouquet' ? 'selected' : '' }}>Money Bouquet</option>
                     <option value="Pecah Belah Parcel" {{ request('jenis') == 'Pecah Belah Parcel' ? 'selected' : '' }}>Pecah Belah Parcel</option>
                     <option value="Parcel Buah" {{ request('jenis') == 'Parcel Buah' ? 'selected' : '' }}>Parcel Buah</option>
-                    <option value="Hamper Baby Born" {{ request('jenis') == 'Hamper Baby Born' ? 'selected' : '' }}>Hamper Baby Born</option>
+                    <option value="Hampers Baby Born" {{ request('jenis') == 'Hampers Baby Born' ? 'selected' : '' }}>Hampers Baby Born</option>
                 </select>
             </div>
         </form>

@@ -7,7 +7,32 @@
   @vite('resources/css/app.css')
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    /* Wrapper khusus slider kategori */
+    .category-slider::-webkit-scrollbar {
+      height: 6px;
+      /* tinggi scrollbar (kecil & tipis) */
+    }
+
+    .category-slider::-webkit-scrollbar-track {
+      background: #fce7f3;
+      /* soft pink pastel */
+      border-radius: 10px;
+    }
+
+    .category-slider::-webkit-scrollbar-thumb {
+      background: #f9a8d4;
+      /* pink bold */
+      border-radius: 10px;
+    }
+
+    .category-slider::-webkit-scrollbar-thumb:hover {
+      background: #ec4899;
+      /* sedikit lebih gelap ketika hover */
+    }
+  </style>
+
 
   <title>Document</title>
 </head>
@@ -21,20 +46,49 @@
 
         <!-- Logo -->
         <a href="/" class="flex items-center">
-          <img src="img/logopc.png" alt="Logo" class="h-24">
+          <img src="img/logopc.png" alt="Logo" class="h-20 md:h-24">
         </a>
 
-        <!-- Menu -->
+        <!-- Desktop Menu -->
         <nav class="hidden md:block absolute left-[58%] transform -translate-x-1/2">
           <ul class="flex items-center justify-center gap-12 text-sm font-medium">
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/">Home</a></li>
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/katalog">Catalog</a></li>
-            <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">About Us</a></li>
+            <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/aboutUs">About Us</a></li>
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">Contact Us</a></li>
           </ul>
         </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn"
+          class="md:hidden text-[#4f056c] focus:outline-none text-3xl">
+          ☰
+        </button>
 
       </div>
     </div>
   </header>
 
+  <!-- Mobile Menu Slide -->
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 w-64 h-full bg-[#fff9f1] shadow-lg transform translate-x-full transition-transform duration-300 z-[60]">
+
+    <div class="p-6">
+      <button id="close-menu" class="text-2xl text-[#4f056c] mb-6">✕</button>
+
+      <ul class="flex flex-col gap-6 text-lg font-medium">
+        <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/">Home</a></li>
+        <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/katalog">Catalog</a></li>
+        <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">About Us</a></li>
+        <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Overlay (blur background) -->
+  <div id="overlay"
+    class="fixed inset-0 bg-black bg-opacity-40 hidden z-50">
+  </div>
+
+  </header>

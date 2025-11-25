@@ -25,21 +25,16 @@
                     <label>Jenis Produk</label>
                     <select name="jenis" class="form-control" required>
                         <option value="">-- Pilih --</option>
-                        <option value="bunga papan">Bunga Papan</option>
-                        <option value="standing flower">Standing Flower</option>
-                        <option value="bunga meja">Bunga Meja</option>
-                        <option value="paper flower">Paper Flower</option>
-                        <option value="hand bouquet">Hand Bouquet</option>
-                        <option value="money bouquet">Money Bouquet</option>
+                        <option value="Bunga Papan">Bunga Papan</option>
+                        <option value="Standing Flower">Standing Flower</option>
+                        <option value="Bunga Meja">Bunga Meja</option>
+                        <option value="Paper Flower">Paper Flower</option>
+                        <option value="Handbouquet">Handbouquet</option>
+                        <option value="Money Bouquet">Money Bouquet</option>
                         <option value="Pecah Belah Parcel">Pecah Belah Parcel</option>
                         <option value="Parcel Buah">Parcel Buah</option>
-                        <option value="Hamper Baby Born">Hamper Baby Born</option>
+                        <option value="Hampers Baby Born">Hampers Baby Born</option>
                     </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">

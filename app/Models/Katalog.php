@@ -17,7 +17,6 @@ class Katalog extends Model
         'id_katalog',
         'nama_produk',
         'jenis',
-        'deskripsi',
         'harga',
         'gambar',
         'status'
