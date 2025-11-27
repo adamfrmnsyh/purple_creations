@@ -20,9 +20,13 @@
       </p>
 
       <!-- Button -->
-      <button class="px-5 py-3 bg-[#f399ab] text-white rounded-full hover:bg-[#d260ee] transition-all">
-        <p class="text-white text-sm md:text-base">Explore Flowers</p>
-      </button>
+      <a href="/katalog"
+        class="inline-block px-5 py-3 bg-[#f399ab] text-white rounded-full 
+          hover:bg-[#d260ee] transition-all text-sm md:text-base">
+        Explore Flowers
+      </a>
+
+
     </div>
   </div>
 

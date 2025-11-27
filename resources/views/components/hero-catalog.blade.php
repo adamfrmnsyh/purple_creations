@@ -1,4 +1,4 @@
-<div class="relative w-full h-[90vh] overflow-hidden mb-10">
+<div class="relative w-full h-[90vh] overflow-hidden">
   <div class="w-full h-full bg-no-repeat bg-center bg-cover"
     style="background-image: url('img/herokatalog.jpg');">
     <div class="w-full h-full flex items-center ">
