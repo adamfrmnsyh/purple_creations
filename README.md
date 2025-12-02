@@ -118,7 +118,7 @@ Setelah server berjalan, kamu dapat:
 
 **Nama:** Adam Firmansyah  
 **GitHub:** https://github.com/adamfrmnsyh  
-**Project Praktikum:** Purple Creations  
+**Project:** Purple Creations  
 
 ---
 
