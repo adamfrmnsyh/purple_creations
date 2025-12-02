@@ -1,61 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Purple Creations
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Purple Creations adalah sebuah project website yang dikembangkan menggunakan **Laravel**. Project ini dibuat sebagai bagian dari tugas praktikum dan digunakan untuk mempelajari konsep dasar pengembangan web modern dengan arsitektur MVC (Model – View – Controller).
 
-## About Laravel
+Website ini berfungsi sebagai platform untuk mengelola halaman, konten, dan elemen-elemen tampilan yang disajikan kepada pengguna.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Struktur project mengikuti standar Laravel
+- Routing berbasis Laravel
+- Template view menggunakan Blade
+- Pengelolaan assets melalui public folder
+- Konfigurasi environment menggunakan `.env`
+- Dapat dikembangkan menjadi website dinamis sesuai kebutuhan
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Teknologi yang Digunakan
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Laravel 12**
+- **PHP 8**
+- **Blade Template Engine**
+- **Composer**
+- **npm (opsional, jika digunakan untuk asset)**
+- **Database:** MySQL 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📂 Struktur Folder Utama
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+tests/
+composer.json
+package.json
+```
 
-### Premium Partners
+Penjelasan singkat:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **app/** → Logika aplikasi (Controller, Model, Middleware)
+- **resources/views/** → File tampilan Blade
+- **routes/web.php** → Routing utama aplikasi
+- **public/** → Asset frontend (CSS, JS, image)
+- **.env** → Konfigurasi aplikasi (database, URL, key)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ⚙️ Cara Instalasi dan Menjalankan Proyek
 
-## Code of Conduct
+Ikuti langkah berikut untuk menjalankan aplikasi secara lokal:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1️⃣ Clone Repository
 
-## Security Vulnerabilities
+```bash
+git clone https://github.com/adamfrmnsyh/purple_creations.git
+cd purple_creations
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2️⃣ Install Dependency PHP
 
-## License
+```bash
+composer install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3️⃣ Copy File Environment
+
+```bash
+cp .env.example .env
+```
+
+Lalu sesuaikan isi file `.env` (nama database, username, password, dll).
+
+### 4️⃣ Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 5️⃣ (Opsional) Migrasi Database
+
+Jika project ini menggunakan tabel database:
+
+```bash
+php artisan migrate
+```
+
+### 6️⃣ Jalankan Server
+
+```bash
+php artisan serve
+```
+
+Akses aplikasi melalui browser:
+
+👉 **http://localhost:8000**
+
+---
+
+## 📘 Cara Penggunaan
+
+Setelah server berjalan, kamu dapat:
+
+- Mengakses halaman utama melalui browser  
+- Mengedit view di folder `resources/views`  
+- Mengatur routing pada `routes/web.php`  
+- Mengembangkan fitur sesuai kebutuhan praktikum  
+
+---
+
+## 👨‍💻 Pembuat
+
+**Nama:** Adam Firmansyah  
+**GitHub:** https://github.com/adamfrmnsyh  
+**Project Praktikum:** Purple Creations  
+
+---
+
+## 🔗 Link Repository GitHub
+
+👉 **https://github.com/adamfrmnsyh/purple_creations**
+
+---
+
+## 📝 Catatan
+
+- Pastikan PHP, Composer, dan extension Laravel sudah terinstall.
+- Jika menggunakan database, buat database baru terlebih dahulu sebelum migrate.
+- Semua konfigurasi utama ada pada file `.env`.
+
