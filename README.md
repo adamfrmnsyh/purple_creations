@@ -1,8 +1,6 @@
 # Purple Creations
 
-Purple Creations adalah sebuah project website yang dikembangkan menggunakan **Laravel**. Project ini dibuat sebagai bagian dari tugas praktikum dan digunakan untuk mempelajari konsep dasar pengembangan web modern dengan arsitektur MVC (Model – View – Controller).
-
-Website ini berfungsi sebagai platform untuk mengelola halaman, konten, dan elemen-elemen tampilan yang disajikan kepada pengguna.
+Purple Creations adalah sebuah project website yang dikembangkan menggunakan **Laravel**.
 
 ---
 
