@@ -14,7 +14,7 @@
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/">Home</a></li>
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/katalog">Catalog</a></li>
             <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/aboutUs">About Us</a></li>
-            <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">Contact Us</a></li>
+            <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/contact">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -38,8 +38,8 @@
         <ul class="flex flex-col gap-6 text-lg font-medium">
           <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/">Home</a></li>
           <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/katalog">Catalog</a></li>
-          <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">About Us</a></li>
-          <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="#">Contact Us</a></li>
+          <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/aboutUs">About Us</a></li>
+          <li><a class="text-[#4f056c] hover:text-[#de8bf3] transition" href="/contact">Contact Us</a></li>
         </ul>
       </div>
 

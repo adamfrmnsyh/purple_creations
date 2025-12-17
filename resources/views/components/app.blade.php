@@ -39,6 +39,7 @@
       scale: 0.7;
       /* kecilkan */
     }
+    
   </style>
 
 

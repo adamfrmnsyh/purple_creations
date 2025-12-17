@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PesananController as PesananAdminController;
 
 Route::get('/', fn() => view('home.index'));
 Route::get('/aboutUs', fn() => view('home.aboutUs'));
+Route::get('/contact', fn() => view('home.contact'));
 Route::get('/katalog', [UserKatalogController::class, 'index'])->name('katalog.index');
 
 // ✅ Admin area

@@ -3,12 +3,12 @@
 
   <!-- JUDUL DI KIRI -->
   <div class="flex-1">
-    <h1 class="text-4xl md:text-7xl font-lobster text-[#4f056c] mb-2">
-        All About
-      </h1>
-      <h1 class="text-4xl md:text-7xl font-lobster text-[#d260ee] mb-4">
-        Purple Creations
-      </h1>
+    <h1 class="text-5xl md:text-7xl font-lobster text-[#4f056c] mb-2">
+      All About
+    </h1>
+    <h1 class="text-5xl md:text-7xl font-lobster text-[#d260ee] mb-4">
+      Purple Creations
+    </h1>
   </div>
 
   <!-- FOTO DI KANAN -->
@@ -16,14 +16,14 @@
     <div class="relative w-[260px] h-[350px] md:w-[350px] md:h-[480px]">
 
       <!-- Foto 1 (tengah) -->
-      <div class="absolute top-6  -translate-x-1/2
+      <div class="absolute top-6
                   w-[130px] h-[180px] md:w-[400px] md:h-[250px]
-                  rounded-xl overflow-hidden shadow-lg border-4 border-white left-4">
+                  rounded-xl overflow-hidden shadow-lg border-4 border-white right-4">
         <img src="img/potoabout.jpg" class="w-full h-full object-cover">
       </div>
 
       <!-- Foto 3 (kanan bawah) -->
-      <div class="absolute bottom-0 right-0 top-72
+      <div class="absolute bottom-0 right-4 top-72
                   w-[120px] h-[170px] md:w-[400px] md:h-[250px]
                   rounded-xl overflow-hidden shadow-lg border-4 border-white">
         <img src="img/potoabout2.jpg" class="w-full h-full object-cover">
