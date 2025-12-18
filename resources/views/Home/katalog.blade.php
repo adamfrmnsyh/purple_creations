@@ -36,6 +36,15 @@
 
         </div>
 
+        <!-- gradient kanan -->
+        <div class="pointer-events-none absolute right-0 top-0 h-full w-10
+                bg-gradient-to-l from-[#fdeef7] to-transparent">
+        </div>
+        <p class="text-xs text-gray-400 px-4 -mt-3 md:hidden text-end">
+            Geser ke samping →
+        </p>
+
+
         <div class=" p-3 mt-10">
             <div class="max-w-7xl mx-auto rounded-xl p-6 mt-[-30px]">
 
@@ -52,7 +61,7 @@
                                 class="w-full aspect-square object-cover rounded-md hover:scale-110 transition-transform duration-300" alt="{{ $item->nama_produk }}">
 
 
-                            <h3 class="text-gray-900 text-lg font-semibold mt-3">{{ $item->nama_produk }}</h3>
+                            <h3 class="text-gray-900 text-base font-semibold mt-3">{{ $item->nama_produk }}</h3>
                             <p class="text-sm text-gray-500">{{ $item->jenis }}</p>
                             <p class="text-sm text-gray-600 line-clamp-2">{{ $item->deskripsi }}</p>
 

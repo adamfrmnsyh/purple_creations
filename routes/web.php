@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\KatalogController;
 use App\Http\Controllers\Frontend\KatalogController as UserKatalogController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\Admin\PesananController as PesananAdminController;
+use App\Http\Controllers\PaymentController;
 
 Route::get('/', fn() => view('home.index'));
 Route::get('/aboutUs', fn() => view('home.aboutUs'));
@@ -46,6 +47,10 @@ Route::get('/export-katalog', function () {
 
     return "Data katalog berhasil diexport!";
 });
+
+
+Route::post('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+
 
 
 require __DIR__.'/auth.php';

@@ -8,7 +8,7 @@
       <h1 class="text-7xl font-lobster text-[#4f056c] mb-8">
         Get in Touch
       </h1>
-      <p class="text-gray-600 mb-6 text-base">
+      <p class="text-black mb-6 text-base">
         We're here for your floral needs — let’s create something beautiful together.
       </p>
     </div>

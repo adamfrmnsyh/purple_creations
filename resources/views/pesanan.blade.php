@@ -11,6 +11,7 @@
 <body class="bg-gray-100 min-h-screen flex items-center justify-center py-10">
 
     <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-3xl">
+
         <h1 class="text-3xl font-bold text-center text-pink-600 mb-6">Form Pemesanan Bunga</h1>
 
         @if(session('success'))
@@ -19,8 +20,22 @@
         </div>
         @endif
 
-        <form action="{{ route('pesanan.store') }}" method="POST">
+        <form action="{{ route('checkout') }}" method="POST">
             @csrf
+
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold mb-1">Gambar Produk</label>
+
+                <div class="flex justify-center">
+                    <img
+                        src="{{ asset('storage/' . $produk->gambar) }}"
+                        alt="Gambar Produk"
+                        class="w-48 h-48 object-cover rounded-lg border shadow ">
+
+                    {{-- kirim path gambar secara tersembunyi --}}
+                    <input type="hidden" name="gambar" value="{{ $produk->gambar }}">
+                </div>
+            </div>
 
             {{-- Bagian Produk (readonly) --}}
             <div class="mb-4">
@@ -85,14 +100,55 @@
                 </select>
             </div>
 
-            <div class="flex justify-center">
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
-                    Kirim Pesanan
+            <div class="flex justify-between items-center">
+                <a href="{{ route('katalog.index') }}"
+                    class="block bg-[#f48f8f] border border-[#f48f8f] text-white text-center px-4 py-2 mt-3 rounded-md hover:bg-white hover:text-[#f48f8f]">
+
+                    ← Kembali
+                </a>
+
+                <button type="submit"
+                    class="block bg-[#E26EE5] border border-[#E26EE5] text-white px-4 py-2 rounded-md">
+                    Bayar Sekarang
                 </button>
+
             </div>
+
         </form>
+
+
     </div>
     </div>
+
+
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js"
+    data-client-key="{{ config('midtrans.client_key') }}"></script>
+
+@if (session('snapToken'))
+<script>
+    window.onload = function () {
+        snap.pay("{{ session('snapToken') }}", {
+            onSuccess: function (result) {
+                alert('Pembayaran berhasil!');
+                console.log(result);
+                // window.location.href = "/payment/success";
+            },
+            onPending: function (result) {
+                alert('Menunggu pembayaran');
+                console.log(result);
+            },
+            onError: function (result) {
+                alert('Pembayaran gagal');
+                console.log(result);
+            },
+            onClose: function () {
+                alert('Popup ditutup');
+            }
+        });
+    };
+</script>
+@endif
+
 
 </body>
 

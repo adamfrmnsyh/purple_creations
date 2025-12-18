@@ -12,10 +12,10 @@
 
 
         <!-- Icon Section -->
-        <div class="px-10 mb-24 border-t">
+        <div class="px-10 mb-24 border-t pt-8 border-pink-200">
 
             <!-- DESKTOP GRID -->
-            <div class="hidden md:grid grid-cols-3 gap-4 pt-20 px-2">
+            <div class="hidden md:grid grid-cols-3 gap-4 px-2">
                 <div class="flex flex-col items-center text-center">
                     <img src="img/icon1.svg" class="h-16 mb-4 opacity-90" alt="">
                     <h3 class="text-xl font-semibold text-[#a45aa5] mb-2">Fresh Flowers</h3>
@@ -43,7 +43,7 @@
 
 
             <!-- MOBILE CAROUSEL (Swiper) -->
-            <div class="md:hidden pt-10">
+            <div class="md:hidden">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
 

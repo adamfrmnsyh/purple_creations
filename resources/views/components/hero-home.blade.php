@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<div class="relative w-full min-h-screen overflow-hidden flex flex-col md:flex-row">
+<div class="relative w-full min-h-screen overflow-hidden flex flex-col md:flex-row bg-[#f2b3c0]">
 
   <!-- Bagian kiri -->
   <div class="w-full md:w-[65%] bg-[#f9e0d1] flex items-center justify-start px-6 py-10 md:pl-12">
@@ -14,7 +14,7 @@
       </h1>
 
       <!-- Description -->
-      <p class="text-gray-600 mb-6 text-sm md:text-base">
+      <p class="text-black mb-6 text-sm md:text-base">
         When flowers are our inspiration to create lasting memories.
         Whatever the occasion, our flowers will make it special.
       </p>
