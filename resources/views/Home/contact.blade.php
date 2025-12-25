@@ -65,7 +65,7 @@
 
                 <!-- ALAMAT KANAN -->
                 <div class="flex flex-col justify-center px-4">
-                    <h3 class="text-2xl font-bold text-[#4f056c] mb-4">Alamat Kami</h3>
+                    <h3 class="text-2xl font-bold text-[#4f056c] mb-4">Our Address</h3>
 
                     <p class="text-lg text-gray-700 leading-relaxed">
                         Purple Creations<br>

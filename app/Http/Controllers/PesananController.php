@@ -45,7 +45,6 @@ class PesananController extends Controller
             'tgl_kirim' => $request->tgl_kirim,
             'catatan' => $request->catatan,
             'tipe_pembelian' => $request->tipe_pembelian,
-            'id_katalog' => $request->id_katalog ?? null,
         ]);
 
         return redirect()->back()->with('success', 'Pesanan berhasil dikirim! 🌸');

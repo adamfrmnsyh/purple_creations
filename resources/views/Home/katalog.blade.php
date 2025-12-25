@@ -71,7 +71,7 @@
 
                             <a href="{{ route('pesanan.create', ['id_katalog' => $item->id_katalog]) }}"
                                 class="block bg-[#E26EE5] border border-[#E26EE5] text-white text-center px-4 py-2 mt-3 rounded-md hover:bg-white hover:text-[#E26EE5]">
-                                Pesan Sekarang
+                                Order Now
                             </a>
 
                         </div>

@@ -11,29 +11,19 @@
     </div>
 
     <!-- Navigation -->
-    <div>
+    <div class="md:col-start-3">
       <h3 class="text-lg font-semibold text-[#d260ee] mb-3">Explore</h3>
       <ul class="space-y-2 text-gray-700">
         <li><a href="/" class="hover:text-[#d87cc9] transition">Home</a></li>
         <li><a href="/katalog" class="hover:text-[#d87cc9] transition">Catalog</a></li>
-        <li><a href="#" class="hover:text-[#d87cc9] transition">About Us</a></li>
-        <li><a href="#" class="hover:text-[#d87cc9] transition">Contact</a></li>
+        <li><a href="/aboutUs" class="hover:text-[#d87cc9] transition">About Us</a></li>
+        <li><a href="/contact" class="hover:text-[#d87cc9] transition">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Support -->
-    <div>
-      <h3 class="text-lg font-semibold text-[#d260ee] mb-3">Support</h3>
-      <ul class="space-y-2 text-gray-700">
-        <li><a href="#" class="hover:text-[#d87cc9] transition">FAQ</a></li>
-        <li><a href="#" class="hover:text-[#d87cc9] transition">Refund Policy</a></li>
-        <li><a href="#" class="hover:text-[#d87cc9] transition">Order Tracking</a></li>
-        <li><a href="#" class="hover:text-[#d87cc9] transition">Shipping Info</a></li>
-      </ul>
-    </div>
 
     <!-- Contact -->
-    <div>
+    <div class="md:col-start-4">
       <h3 class="text-lg font-semibold text-[#d260ee] mb-3">Contact Us</h3>
       <p class="text-gray-700">📍 Jakarta, Indonesia</p>
       <p class="text-gray-700">📞 +62 812-3456-7890</p>
@@ -165,110 +155,113 @@
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===========================
-        VIDEO 1 (LANDSCAPE)
-     =========================== */
+    /* ===========================
+          VIDEO 1 (LANDSCAPE)
+       =========================== */
 
-  const video1 = document.getElementById('video1');
-  const thumb1 = document.getElementById('thumb');
-  const playBtn1 = document.getElementById('playBtn');
-  const volumeBox1 = document.getElementById('volumeBox');
-  const volumeControl1 = document.getElementById('volumeControl');
+    const video1 = document.getElementById('video1');
+    const thumb1 = document.getElementById('thumb');
+    const playBtn1 = document.getElementById('playBtn');
+    const volumeBox1 = document.getElementById('volumeBox');
+    const volumeControl1 = document.getElementById('volumeControl');
 
-  // default volume
-  video1.volume = 0.5;
+    // default volume
+    video1.volume = 0.5;
 
-  function startVideo1() {
-    thumb1.classList.add("hidden");
-    playBtn1.classList.add("hidden");
-    video1.classList.remove("hidden");
-    volumeBox1.classList.remove("hidden");
-    video1.controls = false;
-    video1.play();
-  }
+    function startVideo1() {
+      thumb1.classList.add("hidden");
+      playBtn1.classList.add("hidden");
+      video1.classList.remove("hidden");
+      volumeBox1.classList.remove("hidden");
+      video1.controls = false;
+      video1.play();
+    }
 
-  playBtn1.addEventListener("click", startVideo1);
-  thumb1.addEventListener("click", startVideo1);
+    playBtn1.addEventListener("click", startVideo1);
+    thumb1.addEventListener("click", startVideo1);
 
-  // Show play button when paused
-  video1.addEventListener("pause", () => {
-    if (!thumb1.classList.contains("hidden")) return;
-    playBtn1.classList.remove("hidden");
+    // Show play button when paused
+    video1.addEventListener("pause", () => {
+      if (!thumb1.classList.contains("hidden")) return;
+      playBtn1.classList.remove("hidden");
+    });
+
+    // Volume control
+    volumeControl1.addEventListener("input", () => {
+      video1.volume = volumeControl1.value;
+    });
+
+    // Auto-pause when out of view
+    const observer1 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !video1.paused) {
+            video1.pause();
+          }
+        });
+      }, {
+        threshold: 0.2
+      }
+    );
+
+    observer1.observe(video1);
+
+
+    /* ===========================
+          VIDEO 2 (PORTRAIT)
+       =========================== */
+
+    const video2 = document.getElementById("videoPortrait");
+    const thumb2 = document.getElementById("thumbPortrait");
+    const playBtn2 = document.getElementById("playBtnPortrait");
+    const volumeBox2 = document.getElementById("volumeBoxPortrait");
+    const volumeControl2 = document.getElementById("volumeControlPortrait");
+
+    // default volume
+    video2.volume = 0.7;
+
+    function startVideo2() {
+      thumb2.classList.add("hidden");
+      playBtn2.classList.add("hidden");
+      video2.classList.remove("hidden");
+      volumeBox2.classList.remove("hidden");
+      video2.controls = false;
+      video2.play();
+    }
+
+    playBtn2.addEventListener("click", startVideo2);
+    thumb2.addEventListener("click", startVideo2);
+
+    // Show play button when paused
+    video2.addEventListener("pause", () => {
+      if (!thumb2.classList.contains("hidden")) return;
+      playBtn2.classList.remove("hidden");
+    });
+
+    // Volume
+    volumeControl2.addEventListener("input", () => {
+      video2.volume = volumeControl2.value;
+    });
+
+    // Auto-pause when keluar layar
+    const observer2 = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !video2.paused) {
+            video2.pause();
+          }
+        });
+      }, {
+        threshold: 0.2
+      }
+    );
+
+    observer2.observe(video2);
   });
-
-  // Volume control
-  volumeControl1.addEventListener("input", () => {
-    video1.volume = volumeControl1.value;
-  });
-
-  // Auto-pause when out of view
-  const observer1 = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting && !video1.paused) {
-          video1.pause();
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  observer1.observe(video1);
-
-
-  /* ===========================
-        VIDEO 2 (PORTRAIT)
-     =========================== */
-
-  const video2 = document.getElementById("videoPortrait");
-  const thumb2 = document.getElementById("thumbPortrait");
-  const playBtn2 = document.getElementById("playBtnPortrait");
-  const volumeBox2 = document.getElementById("volumeBoxPortrait");
-  const volumeControl2 = document.getElementById("volumeControlPortrait");
-
-  // default volume
-  video2.volume = 0.7;
-
-  function startVideo2() {
-    thumb2.classList.add("hidden");
-    playBtn2.classList.add("hidden");
-    video2.classList.remove("hidden");
-    volumeBox2.classList.remove("hidden");
-    video2.controls = false;
-    video2.play();
-  }
-
-  playBtn2.addEventListener("click", startVideo2);
-  thumb2.addEventListener("click", startVideo2);
-
-  // Show play button when paused
-  video2.addEventListener("pause", () => {
-    if (!thumb2.classList.contains("hidden")) return;
-    playBtn2.classList.remove("hidden");
-  });
-
-  // Volume
-  volumeControl2.addEventListener("input", () => {
-    video2.volume = volumeControl2.value;
-  });
-
-  // Auto-pause when keluar layar
-  const observer2 = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting && !video2.paused) {
-          video2.pause();
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  observer2.observe(video2);
-});
 </script>
+
 
 
 </body>

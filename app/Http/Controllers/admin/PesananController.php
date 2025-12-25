@@ -61,9 +61,19 @@ class PesananController extends Controller
 
             // Header CSV
             fputcsv($handle, [
-                'ID', 'Nama Pemesan', 'Email', 'Alamat', 'No. Telp', 'Nama Produk',
-                'Jenis Bunga', 'Harga', 'Tanggal Kirim', 'Catatan', 'Tipe Pembelian',
-                'Tanggal Pesanan Dibuat', 'Status'
+                'ID',
+                'Nama Pemesan',
+                'Email',
+                'Alamat',
+                'No. Telp',
+                'Nama Produk',
+                'Jenis Bunga',
+                'Harga',
+                'Tanggal Kirim',
+                'Catatan',
+                'Tipe Pembelian',
+                'Tanggal Pesanan Dibuat',
+                'Status'
             ]);
 
             // Data CSV
@@ -89,5 +99,18 @@ class PesananController extends Controller
         };
 
         return Response::stream($callback, 200, $headers);
+    }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:Belum ACC,Sudah ACC,Dibatalkan',
+        ]);
+
+        $pesanan = Pesanan::findOrFail($id);
+        $pesanan->status = $request->status;
+        $pesanan->save();
+
+        return redirect()->back()->with('success', 'Status pesanan berhasil diubah');
     }
 }

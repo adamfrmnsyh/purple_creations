@@ -87,14 +87,38 @@
                         <td>{{ $item->tipe_pembelian }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->created_at)->format('d/m/Y H:i') }}</td>
                         <td>
-                            @if ($item->status == 'Sudah ACC')
-                                <span class="badge bg-success text-light">Sudah ACC</span>
-                            @elseif ($item->status == 'Dibatalkan')
-                                <span class="badge bg-danger text-light">Dibatalkan</span>
-                            @else
-                                <span class="badge bg-warning text-dark">Belum ACC</span>
-                            @endif
+                            <form action="{{ route('admin.pesanan.updateStatus', $item->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+
+                                <select
+                                    name="status"
+                                    class="form-select form-select-sm text-white
+                {{ $item->status == 'Sudah ACC' ? 'bg-success' : 
+                   ($item->status == 'Dibatalkan' ? 'bg-danger' : 'bg-warning text-dark') }}"
+                                    onchange="this.form.submit()">
+
+                                    <option value="Belum ACC"
+                                        class="bg-warning text-dark"
+                                        {{ $item->status == 'Belum ACC' ? 'selected' : '' }}>
+                                        Belum ACC
+                                    </option>
+
+                                    <option value="Sudah ACC"
+                                        class="bg-success text-white"
+                                        {{ $item->status == 'Sudah ACC' ? 'selected' : '' }}>
+                                        Sudah ACC
+                                    </option>
+
+                                    <option value="Dibatalkan"
+                                        class="bg-danger text-white"
+                                        {{ $item->status == 'Dibatalkan' ? 'selected' : '' }}>
+                                        Dibatalkan
+                                    </option>
+                                </select>
+                            </form>
                         </td>
+
                     </tr>
                     @empty
                     <tr>
