@@ -53,24 +53,45 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
 
                         @foreach ($produk as $item)
-                        <div class="bg-white rounded-xl shadow-md overflow-hidden p-4 transform transition-transform duration-300 cursor-pointer"
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden p-4
+                   flex flex-col h-full
+                   transform transition-transform duration-300 cursor-pointer"
                             data-type="{{ $item->jenis }}">
 
-
+                            <!-- Gambar -->
                             <img src="{{ asset('storage/' . $item->gambar) }}"
-                                class="w-full aspect-square object-cover rounded-md hover:scale-110 transition-transform duration-300" alt="{{ $item->nama_produk }}">
+                                class="w-full aspect-square object-cover rounded-md
+                       hover:scale-110 transition-transform duration-300"
+                                alt="{{ $item->nama_produk }}">
+
+                            <!-- Judul -->
+                            <h3 class="text-gray-900 text-base font-semibold mt-3 truncate min-h-[1.5rem]">
+                                {{ $item->nama_produk }}
+                            </h3>
 
 
-                            <h3 class="text-gray-900 text-base font-semibold mt-3">{{ $item->nama_produk }}</h3>
-                            <p class="text-sm text-gray-500">{{ $item->jenis }}</p>
-                            <p class="text-sm text-gray-600 line-clamp-2">{{ $item->deskripsi }}</p>
+                            <!-- Jenis -->
+                            <p class="text-sm text-gray-500">
+                                {{ $item->jenis }}
+                            </p>
 
-                            <div class="text-gray-900 mt-2">
+                            <!-- Deskripsi -->
+                            <p class="text-sm text-gray-600 line-clamp-2">
+                                {{ $item->deskripsi }}
+                            </p>
+
+                            <!-- Harga -->
+                            <div class="text-gray-900 mt-2 mb-2">
                                 Rp {{ number_format($item->harga, 0, ',', '.') }}
                             </div>
 
+                            <!-- BUTTON (SELALU DI BAWAH) -->
                             <a href="{{ route('pesanan.create', ['id_katalog' => $item->id_katalog]) }}"
-                                class="block bg-[#E26EE5] border border-[#E26EE5] text-white text-center px-4 py-2 mt-3 rounded-md hover:bg-white hover:text-[#E26EE5]">
+                                class="block bg-[#E26EE5] border border-[#E26EE5]
+                      text-white text-center px-4 py-2
+                      mt-auto rounded-md
+                      hover:bg-white hover:text-[#E26EE5] transition">
                                 Order Now
                             </a>
 
@@ -79,6 +100,7 @@
 
                     </div>
                 </div>
+
 
                 <!-- MODE SWIPER (UNTUK KATEGORI BIASA) -->
                 <div id="swiperMode">

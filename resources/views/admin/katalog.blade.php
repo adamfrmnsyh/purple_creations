@@ -74,7 +74,7 @@
                         </td>
                         <td>
                             <a href="{{ route('admin.katalog.edit', $item->id_katalog) }}"
-                                class="btn btn-warning btn-sm">
+                                class="btn btn-warning btn-sm mb-2">
                                 Edit
                             </a>
 
@@ -83,7 +83,7 @@
                             <form action="{{ route('admin.katalog.destroy', $item->id_katalog) }}"
                                 method="POST" style="display:inline;">
                                 @csrf @method('DELETE')
-                                <button onclick="return confirm('Hapus produk ini?')" class="btn btn-danger btn-sm">
+                                <button onclick="return confirm('Hapus produk ini?')" class="btn btn-danger btn-sm mb-2">
                                     Hapus
                                 </button>
                             </form>

@@ -34,6 +34,9 @@
                         <option value="Pecah Belah Parcel">Pecah Belah Parcel</option>
                         <option value="Parcel Buah">Parcel Buah</option>
                         <option value="Hampers Baby Born">Hampers Baby Born</option>
+                        <option value="Bunga Meja (Artificial)">Bunga Meja (Artificial)</option>
+                        <option value="Handbouquet (Artificial)">Handbouquet (Artificial)</option>
+                        <option value="Money Bouquet (Artificial)">Money Bouquet (Artificial)</option>
                     </select>
                 </div>
 

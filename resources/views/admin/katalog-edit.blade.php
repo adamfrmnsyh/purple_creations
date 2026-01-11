@@ -29,6 +29,9 @@
                 <option value="Pecah Belah Parcel" {{ $katalog->jenis == 'Pecah Belah Parcel' ? 'selected' : '' }}>Pecah Belah Parcel</option>
                 <option value="Parcel Buah" {{ $katalog->jenis == 'Parcel Buah' ? 'selected' : '' }}>Parcel Buah</option>
                 <option value="Hamper Baby Born" {{ $katalog->jenis == 'Hamper Baby Born' ? 'selected' : '' }}>Hamper Baby Born</option>
+                <option value="Bunga Meja (Artificial)" {{ $katalog->jenis == 'Bunga Meja (Artificial)' ? 'selected' : '' }}>Bunga Meja (Artificial)</option>
+                <option value="Handbouquet (Artificial)" {{ $katalog->jenis == 'Handbouquet (Artificial)' ? 'selected' : '' }}>Handbouquet (Artificial)</option>
+                <option value="Money Bouquet (Artificial)" {{ $katalog->jenis == 'Money Bouquet (Artificial)' ? 'selected' : '' }}>Money Bouquet (Artificial)</option>
             </select>
         </div>
 

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Pesanan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use App\Mail\PesananAccMail;
+use Illuminate\Support\Facades\Mail;
 
 class PesananController extends Controller
 {
@@ -108,8 +110,17 @@ class PesananController extends Controller
         ]);
 
         $pesanan = Pesanan::findOrFail($id);
+
+        $statusLama = $pesanan->status;
         $pesanan->status = $request->status;
         $pesanan->save();
+
+        // ✅ Kirim email HANYA jika berubah ke "Sudah ACC"
+        if ($statusLama !== 'Sudah ACC' && $request->status === 'Sudah ACC') {
+            Mail::to($pesanan->email)->send(
+                new PesananAccMail($pesanan)
+            );
+        }
 
         return redirect()->back()->with('success', 'Status pesanan berhasil diubah');
     }
